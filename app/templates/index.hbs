@@ -5,3 +5,10 @@
 <p>We will also include links to equipment reviews</p>
 
 {{#link-to 'news'}}News{{/link-to}} | {{#link-to 'portland_rinks'}}Portland Rinks{{/link-to}}
+
+<ul> <!--use #each to loop through models-->
+  {{#each model as | post |}}
+    <li><h3>{{post.title}}</h3> <h4>by {{post.author}}</h4></li>
+      <p>{{post.body}}</p>
+  {{/each}}
+</ul>
