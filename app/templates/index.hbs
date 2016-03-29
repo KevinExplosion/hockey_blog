@@ -7,8 +7,8 @@
 {{#link-to 'news'}}News{{/link-to}} | {{#link-to 'portland_rinks'}}Portland Rinks{{/link-to}}
 
 <ul> <!--use #each to loop through models-->
-  {{#each model as | post |}}
-    <li><h3>{{post.title}}</h3> <h4>by {{post.author}}</h4></li>
-      <p>{{post.body}}</p>
+  {{#each model as | posts |}} <!--inside the || can be whatever. As long as it matches what you call for inside the handlebar braces below. It doesn't have to match what the model is called in the index.js-->
+    <li><h3>{{posts.title}}</h3> <h4>by {{posts.author}}</h4></li>
+      <p>{{posts.body}}</p>
   {{/each}}
 </ul>
